@@ -7,5 +7,6 @@
   },
   "replace": {
     "oxid-esales/paymorrow-module": "*"
-  }
+  },
+  "license": "GPL-3.0-or-later"
 }
