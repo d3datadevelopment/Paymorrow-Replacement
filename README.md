@@ -12,6 +12,16 @@ if the Paymorrow module is not used and should be removed from the shop installa
     `composer require d3/oxid-paymorrow-replacement --update-no-dev`
     
 * Manually remove the files from source/modules/oxps/paymorrow.
+* OXID eShop 6.2 only:
+
+    ```
+    composer require -n oxid-esales/oxideshop-update-component oxid-esales/developer-tools --update-no-dev
+    vendor/bin/oe-console oe:module:reset-configurations
+    vendor/bin/oe-console oe:oxideshop-update-component:install-all-modules
+    composer remove -n oxid-esales/oxideshop-update-component oxid-esales/developer-tools --update-no-dev
+    ```
+    
+    Please ignore "not readable file" message.
 
 ## Uninstall
 
